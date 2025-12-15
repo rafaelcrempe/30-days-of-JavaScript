@@ -73,7 +73,7 @@ let prompt = require("prompt-sync")()
 // 11. Compare your first name length and your family name length and you should get this output: "name" is longer than "lastname"
 
 
-    let name = prompt('Enter your name: ')
+    let name2 = prompt('Enter your name: ')
     let lastname = prompt('Enter your last name: ')
 
     console.log(
