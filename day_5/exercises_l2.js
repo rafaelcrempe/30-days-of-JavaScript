@@ -1,1 +1,3 @@
-let prompt = require("prompt-sync")()
+import countries from './countries.js';
+import webTechs from './web_techs.js';
+
