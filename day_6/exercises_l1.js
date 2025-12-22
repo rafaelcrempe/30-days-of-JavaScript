@@ -50,17 +50,17 @@ const mernStack = ['MongoDB', 'Express', 'React', 'Node']
     }
 
 
-    let j = 10
-    while (j >= 0) {
-        console.log(j)
-        j--
+    let l = 10
+    while (l >= 0) {
+        console.log(l)
+        l--
     }
 
-    let k = 10
+    let m = 10
     do {
-        console.log(k)
-        k--
-    } while (k >= 0)
+        console.log(m)
+        m--
+    } while (m >= 0)
 
 // // 3. Iterate 0 to n using for loop
 
@@ -133,7 +133,7 @@ for (let i = 0; i <= 10; i++) {
     console.log(i + '\t' + square + '\t' + cube);
 }
 
-//7. Use for loop to iterate from 0 to 100 and print only even numbers
+// 7. Use for loop to iterate from 0 to 100 and print only even numbers
 
 for (let i = 0; i <=100;  i++) {
     
@@ -143,7 +143,7 @@ for (let i = 0; i <=100;  i++) {
     
 }
 
-//8. Use for loop to iterate from 0 to 100 and print only odd numbers
+// 8. Use for loop to iterate from 0 to 100 and print only odd numbers
 
 for (let i = 0; i <=100;  i++) {
     
@@ -153,4 +153,83 @@ for (let i = 0; i <=100;  i++) {
     
 }
 
-//9. 
+// 9. Use for loop to iterate from 0 to 100 and print only prime numbers
+
+for (let i = 0; i <= 100; i++) {
+    for (let k = 2; k < i; k++) {
+        if (i % k === 0 && i > 1) {
+            console.log(i)
+        }
+    }
+}
+
+// 10. Use for loop to iterate from 0 to 100 and print the sum of all numbers.
+
+let sum = 0
+for (let i = 0; i <= 100; i++) {
+     sum += i;
+}
+
+console.log(sum)
+
+// 11. Use for loop to iterate from 0 to 100 and print the sum of all evens and the sum of all odds.
+
+let even = 0;
+let odd = 0;
+for (let i = 0; i <= 100; i++) {
+    if (i % 2 == 0) {
+        even += i;
+    } else if (i % 2 > 0) {
+        odd += i
+    }
+}
+console.log(`the sum of all even number is ${even}. And the sum of all odd numbers is ${odd}`)
+
+// 12. Use for loop to iterate from 0 to 100 and print the sum of all evens and the sum of all odds. Print sum of evens and sum of odds as array
+
+let sumEvenOdds = [0, 0]
+for (let i = 0; i <= 100; i++) {
+    if (i % 2 == 0) {
+        sumEvenOdds[0] += i;
+    } else if (i % 2 > 0) {
+        sumEvenOdds[1] += i;
+    }
+}
+console.log(sumEvenOdds)
+
+// 13. Develop a small script which generate array of 5 random numbers
+
+let randomNumbersArray = []
+
+for (i = 0; i <5; i++) {
+    randomNumbersArray.push(Math.floor(Math.random() * 10))
+}
+
+console.log(randomNumbersArray)
+
+// 14. Develop a small script which generate array of 5 random numbers and the numbers must be unique
+
+let randomArr = [];
+
+while (randomArr.length < 5) {
+    let randomNum = Math.floor(Math.random() * 10);
+    if (!randomArr.includes(randomNum)) {
+        randomArr.push(randomNum);
+    }
+}
+
+console.log(randomArr);
+
+// 15. Develop a small script which generate a six characters random id
+
+let char = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%&*"
+
+let id = ""
+
+for (let i = 0; i < 6; i++) { 
+        const random = Math.floor(Math.random() * char.length);
+        id += char[random];
+}
+
+console.log(id)
+
