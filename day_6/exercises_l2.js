@@ -171,5 +171,3 @@ for (let i = 0; i < webTechs.length; i++) {
 }
 
 console.log(`The longest word in the webTechs array is '${longestWord}'`);
-
-// 12. 
