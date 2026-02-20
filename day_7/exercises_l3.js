@@ -20,4 +20,34 @@ function userIdGeneratedByUser() {
     }
 }
 
-userIdGeneratedByUser();
+// userIdGeneratedByUser();
+
+// 2. Write a function name rgbColorGenerator and it generates rgb colors.
+
+function rgbColorGenerator() {
+    let rgb = (`rgb(${Math.floor(Math.random() * 256)},${Math.floor(Math.random() * 256)},${Math.floor(Math.random() * 256)})`)
+    console.log(rgb)
+}
+
+rgbColorGenerator();
+
+//3. Write a function arrayOfHexaColors which return any number of hexadecimal colors in an array.
+
+function arrayOfHexaColors() {
+    let numberOfColors = Number(prompt('How many colors do you want? '));
+    let hexDigits = "0123456789ABCDEF";
+    let colors = [];
+
+    for (let i = 0; i < numberOfColors; i++) {
+        let color = '#'
+
+        for(let j = 0; j <6; j++){
+            color += hexDigits[Math.floor(Math.random() * 16)]
+        }
+        colors.push(color);
+    }
+
+    console.log(colors)
+}
+
+arrayOfHexaColors();
