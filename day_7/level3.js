@@ -299,4 +299,3 @@ function areSameDataType(arr) {
 
 areSameDataType([1, 2, 3]);
 
-// 18. 
