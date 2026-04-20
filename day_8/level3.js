@@ -140,7 +140,7 @@ function signUp() {
   console.log(users);
 }
 
-signUp();
+// signUp();
 
 // b. Create a function called signIn which allows user to sign in to the application.
 
@@ -167,12 +167,54 @@ function signIn() {
   console.log((`Welcome back, ${user.username}! You are now logged in.`));
 }
 
-signIn();
+// signIn();
 
 /* 3. The products array has three elements and each of them has six properties. 
 a. Create a function called rateProduct which rates the product */
 
+function rateProduct(productId, userId, rate) {
+
+ if (typeof rate !== 'number' || rate < 0 || rate > 5) {
+    console.error('Rate must be a number between 0 and 5');
+    return null;
+  }
+
+    const product = products.find(p => p._id === productId);
+  if (!product) {
+    console.error(`Product with _id "${productId}" not found`);
+    return null;
+  }
+
+  product.ratings.push({ userId, rate });
+  return product;
+}
+
+// rateProduct('aegfal', 1, 4);
+// console.log(products)
+
 // b. Create a function called averageRating which calculate the average rating of a product.
+
+function averageRating(productId) {
+  const product = products.find(p => p._id === productId);
+  if (!product) {
+    console.error(`Product not found.`);
+    return null;
+  }
+
+  const ratings = product.ratings;
+  if (ratings.length === 0) {
+    return 0; 
+  }
+
+
+  const sum = ratings.reduce((total, rating) => total + rating.rate, 0);
+  const average = sum / ratings.length;
+  
+  return average;
+}
+
+console.log(averageRating('eedfcf'))
+
 
 /* 4. Create a function called likeProduct. 
 This function will helps to like to the product if it is not liked and remove like if it was liked. */
