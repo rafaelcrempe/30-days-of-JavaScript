@@ -1,4 +1,4 @@
-import countries from './countries.js';
+import countries from '../countries.js';
 import webTechs from './web_techs.js';
 
 //2. First remove all the punctuations and change the string to array and count the number of words in the array
