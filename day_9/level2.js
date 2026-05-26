@@ -1,4 +1,4 @@
-import countries from "../countries.js";
+import countries from "../data/countries.js";
 const products = [
   { product: "banana", price: 3 },
   { product: "mango", price: 6 },
